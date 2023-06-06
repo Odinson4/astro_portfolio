@@ -1,0 +1,86 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section class="box skills">
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="stack" color="var(--accent-regular)" size="2.5rem" gradient />
+    <h2>Full-Stack Development</h2>
+    <p>
+      With my skills in designing engaging user interfaces and implementing
+      robust server-side functionality, I create seamless and user-friendly
+      experiences. I thrive on the challenge of mastering a diverse range of
+      technologies, enabling me to take projects from conception to completion
+      with a comprehensive and cohesive approach.
+    </p>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon
+      icon="connector"
+      color="var(--accent-regular)"
+      size="2.5rem"
+      gradient
+    />
+    <h2>Connector</h2>
+    <p>
+      With my ability to bridge diverse perspectives, foster collaboration, and
+      facilitate effective communication, I excel at creating cohesive and
+      harmonious environments that drive innovation and deliver exceptional
+      results. I thrive in bringing people together, building consensus, and
+      leveraging the strengths of individuals to achieve shared goals, making me
+      an invaluable asset to any collaborative endeavor.
+    </p>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="switch" color="var(--accent-regular)" size="2.5rem" gradient />
+    <h2>Technical Versatility</h2>
+    <p>
+      Embracing diverse perspectives and actively seeking opportunities to
+      learn, I bring a holistic approach to problem-solving. As a versatile
+      professional, I excel at adapting to new challenges, leveraging my
+      interdisciplinary knowledge, and collaborating effectively across teams to
+      deliver innovative solutions that go beyond technical boundaries.
+    </p>
+  </div>
+</section>
+
+<style>
+  .box {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .skills h2 {
+    font-size: var(--text-lg);
+  }
+
+  .skills p {
+    color: var(--gray-400);
+  }
+
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+    }
+
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

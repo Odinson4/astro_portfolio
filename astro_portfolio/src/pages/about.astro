@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout title="About | Dylan Abbott" description="About Dylan Abbott">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/background.jpg"
+          alt="Jeanine White at work with a colleague"
+        />
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            With over a decade of experience in the oilfield industry, I have
+            cultivated a strong work ethic and a commitment to integrity. Now
+            transitioning into software development, I bring a unique
+            perspective and a passion for creativity and problem-solving.
+          </p>
+          <br />
+          <p>
+            Currently pursuing coursework in software development, I am eager to
+            apply my skills in a challenging and dynamic work environment.
+            Adaptability, persistence, and attention to detail are qualities I
+            honed in the oilfield, and I am excited to collaborate with others
+            to create impactful solutions in the world of tech.
+          </p>
+          <br />
+
+          <p>
+            I am a lifelong learner and enjoy exploring new ideas and
+            technologies. I am also a strong advocate for diversity and
+            inclusion in the workplace and am passionate about creating
+            opportunities for others to learn and grow.
+          </p>
+          <br />
+          <p>
+            As a dedicated and reliable software engineer, I am open to
+            exploring opportunities where I can contribute and make a
+            difference. Let's connect and discuss how we can work together to
+            achieve great things.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>Flatiron School of Denver: Software Engineering</p>
+          <p>Community College of Denver: Radiology</p>
+          <p>Westlake High School</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>
+            JavaScript | HTML | CSS | React | Vite.js | Python | Flask | SQL |
+            SQLAlchemy | ArcGIS | GitHub | Mocha | Web | Scraping | Restful |
+            APIs | Postman | React Hooks | JSON | Next.js | EditorJS |
+            PostgreSQL | SQLite | Node.js | AWS | TypeScript | ORM | OOP
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
