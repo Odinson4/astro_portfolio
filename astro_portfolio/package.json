@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run build:astro && npm run build:netlify",
     "preview": "astro preview",
     "astro": "astro"
   },
